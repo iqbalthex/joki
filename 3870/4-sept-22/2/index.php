@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head><title>Tugas 2</title></head>
+<head>
+	<title>Tugas 2</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+		font-size: 1.1em;
+	}
+	form{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		background: #bbb;
+	}
+	</style>
+</head>
 <body>
 	<form action="" method="post">
 		<div>Tanggal awal: <input type="date" name="start" /></div>
@@ -21,9 +39,9 @@
 			$jd_selisih = $jd_end - $jd_start;
 
 			echo 'Selisih antara tanggal ';
-			echo "{$start[2]} {$start_bulan} {$start[0]}";
+			echo "$start[2] $start_bulan $start[0]";
 			echo " s/d ";
-			echo "{$end[2]} {$end_bulan} {$end[0]}";
+			echo "$end[2] $end_bulan $end[0]";
 			echo " adalah $jd_selisih hari";
 		}
 		?>
