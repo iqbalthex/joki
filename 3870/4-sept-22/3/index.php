@@ -35,11 +35,23 @@
 			$time = mktime(0,0,0,$born[1],$born[2],$born[0]);
 
 			# menghitung selisih hari
+			$lahir = date('Y-m-d',$time);
+			$now = date('Y-m-d');
+
+			# memanfaatkan fungsi mysqli
+			$conn = mysqli_connect('localhost','root','','test');
+			$q = "SELECT datediff('$lahir','$now') AS selisih;";
+			$data = mysqli_fetch_array(mysqli_query($conn,$q));
+			$selisih = abs($data['selisih']) - 1;
+
+		/*
+			menghitung selisih (alternatif)
 			$diff = date_diff(
 				date_create(date('Y-m-d',$time)),
 				date_create(date('Y-m-d',mktime(0)))
 			);
 			$selisih = $diff->format('%a') - 1;
+		*/
 
 			#	menghitung tahun, bulan dan hari
 			$y = cekUmur('Y',0,'md');
