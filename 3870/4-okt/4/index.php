@@ -114,7 +114,7 @@ $jur = [
 		foreach($_POST as $data){
 			if(substr($data, 0, 3) == 'nim'){
 				$nim = explode('-',$data)[1];
-				mysqli_query($conn, "DELETE FROM mahasiswa where nim = $nim");
+				mysqli_query($conn, "DELETE FROM mahasiswa where nim = '$nim'");
 			}
 		}
 		echo '<script>window.location = "../4";</script>';

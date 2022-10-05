@@ -106,8 +106,9 @@
 					"addr_$i" => $addr
 				] = $_POST;
 				mysqli_query($conn, "INSERT INTO mahasiswa VALUES(
-					'$nim', '$nama', '$jk', '$tpt', '$tgl', '$jur', '', $addr'
+					'$nim', '$nama', '$jk', '$tpt', '$tgl', '$jur', '', '$addr'
 				)");
+				echo mysqli_error($conn);
 			}
 		
 		} ?>
