@@ -1,6 +1,7 @@
 <?php
 
 $conn1 = mysqli_connect('localhost','root','');
+mysqli_query($conn1, "DROP DATABASE IF EXISTS psibwl2");
 mysqli_query($conn1, "CREATE DATABASE IF NOT EXISTS psibwl2");
 mysqli_query($conn1, "USE psibwl2");
 mysqli_query($conn1, "CREATE TABLE IF NOT EXISTS mahasiswa(
