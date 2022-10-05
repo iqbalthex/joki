@@ -21,8 +21,8 @@ SET time_zone = "+00:00";
 -- Database: `psibwl`
 --
 
-CREATE DATABASE IF NOT EXISTS `psibwl`;
-USE `psibwl`;
+CREATE DATABASE IF NOT EXISTS `psibwl2`;
+USE `psibwl2`;
 
 -- --------------------------------------------------------
 
