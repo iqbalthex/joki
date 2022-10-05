@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','psibwl');
+$conn = mysqli_connect('localhost','root','','psibwl2');
 $rows = mysqli_query($conn, "SELECT * FROM mahasiswa");
 $mhs = [];
 for($i=0;$i<mysqli_num_rows($rows);$i++){

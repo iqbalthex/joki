@@ -94,7 +94,7 @@
 			<?php } ?>
 		</form>
 		<?php if (isset($_POST['proses2'])){
-			$conn = mysqli_connect('localhost','root','','psibwl');
+			$conn = mysqli_connect('localhost','root','','psibwl2');
 			for($i=0;$i<$_POST['n'];$i++){
 				[
 					"nim_$i" => $nim,
@@ -108,7 +108,7 @@
 				mysqli_query($conn, "INSERT INTO mahasiswa VALUES(
 					'$nim', '$nama', '$jk', '$tpt', '$tgl', '$jur', '', '$addr'
 				)");
-				echo mysqli_error($conn);
+				echo '<script>window.location = "index.php";</script>';
 			}
 		
 		} ?>
