@@ -41,15 +41,20 @@ main h1{
 	margin-bottom: 0.5rem;
 }
 
-#map-menu ul li{
+#map-menu a{
+	display: block;
 	padding: 2px 0;
 	transition: all .7s;
 }
 
-#map-menu ul li:hover{
+#map-menu a:hover{
 	background: #d99;
 	border-bottom: 1px solid red;
 	cursor: pointer;
 	letter-spacing: .5px;
 	transition: background .6s, letter-spacing .6s;
+}
+
+#map{
+	width: 100%;
 }
