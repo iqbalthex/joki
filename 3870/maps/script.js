@@ -5,7 +5,7 @@ const map = new google.maps.Map(document.getElementById("map"), {
 });
 
 places.forEach(el => {
-	el.onclick = function(e){
+	el.onclick = e => {
 		const { lat, lng } = e.target.dataset;
 		console.table({ lat, lng });
 		selectPlace({ lat, lng });
@@ -13,7 +13,7 @@ places.forEach(el => {
 });
 
 let marker;
-function selectPlace(position){
+const selectPlace = position => {
 	if(marker){
 		marker.setPosition(position);
 	} else {
