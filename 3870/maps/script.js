@@ -1,22 +1,20 @@
-const places = document.querySelectorAll('#map-menu li a');
-const map = new google.maps.Map(document.getElementById("map"), {
-	center: new google.maps.LatLng(-8.5830695,116.3202515),
-	zoom: 9,
-});
-
+const places = document.querySelectorAll('#map-menu a');
 places.forEach(el => {
 	el.onclick = e => {
 		const { lat, lng } = e.target.dataset;
-		console.table({ lat, lng });
-		selectPlace({ lat, lng });
+		selectPlace([ lat, lng ]);
 	}
 });
 
+const map = L.map('map', {
+	center: [0.478491, 101.380996],
+	zoom: 16
+});
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
 let marker;
 const selectPlace = position => {
-	if(marker){
-		marker.setPosition(position);
-	} else {
-		marker = new google.maps.Marker({ map, position });
-	}
+	marker && map.removeLayer(marker);
+	marker = L.marker(position).addTo(map);
+	map.setView(position, 16.5);
 }
