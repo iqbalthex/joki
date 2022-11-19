@@ -8,7 +8,7 @@ places.forEach(el => {
 	el.onclick = function(e){
 		const { lat, lng } = e.target.dataset;
 		// console.table({ lat, lng });
-		// selectPlace({ lat, lng });
+		selectPlace({ lat, lng });
 	}
 });
 
