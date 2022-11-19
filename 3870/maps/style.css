@@ -5,7 +5,7 @@
 
 html, body{
 	height: 100%;
-	background: #ddd;
+	background: #ecc;
 }
 
 ul{
@@ -32,7 +32,7 @@ main h1{
 }
 
 #map-menu{
-	width: 250px;
+	width: 320px;
 	padding: 0.5rem;
 	border-right: 2px solid;
 }
@@ -42,12 +42,14 @@ main h1{
 }
 
 #map-menu ul li{
+	padding: 2px 0;
 	transition: all .7s;
 }
 
 #map-menu ul li:hover{
-	background: #ccc;
+	background: #d99;
+	border-bottom: 1px solid red;
 	cursor: pointer;
-	letter-spacing: 1px;
-	transition: all .7s;
+	letter-spacing: .5px;
+	transition: background .6s, letter-spacing .6s;
 }
